@@ -413,101 +413,82 @@ body {
 }
 
   FOOTER FULL WIDTH
-=============================== */
-footer {
-  background-color: #0c7135;
-  color: #fff;
-  width: 100%;
-  padding: 40px 60px;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.footer-left, .footer-right {
-  flex: 1 1 300px;
-}
-
-footer h3 {
-  margin-bottom: 10px;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-footer p {
-  font-size: 16px;
-  line-height: 1.6;
+ /* Mengatur font dasar agar lebih rapi */
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
 }
 
-footer a {
-  color: #fff;
-  text-decoration: none;
+/* 1. STYLING DASAR FOOTER */
+.footer {
+  background-color: #1A5A3B; /* Warna hijau tua (sesuai gambar) */
+  color: #FFFFFF;           /* Warna teks putih */
+  padding: 40px 20px;      /* Jarak di dalam footer (atas/bawah 40px, kiri/kanan 20px) */
 }
 
-footer a:hover {
-  text-decoration: underline;
+/* 2. KONTAINER (Pembungkus konten agar rapi) */
+.footer-container {
+  max-width: 1100px; /* Lebar maksimum konten */
+  margin: 0 auto;    /* Menengahkan konten */
 }
 
-footer hr {
-  border: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  margin: 30px 0;
+/* 3. BAGIAN ATAS (Kolom) */
+.footer-top {
+  display: flex;
+  flex-direction: column; /* MOBILE: Susun ke bawah (tumpuk) */
+  gap: 30px;              /* Jarak antar kolom saat ditumpuk */
 }
 
+/* 4. KOLOM INDIVIDU (Alamat & Kontak) */
+.footer-column h4 {
+  font-size: 1.2rem;       /* Ukuran judul (Alamat, Kontak) */
+  font-weight: 700;      /* Teks tebal */
+  margin: 0 0 15px 0;    /* Jarak bawah dari judul ke paragraf */
+}
+
+.footer-column p {
+  font-size: 0.95rem;      /* Ukuran teks biasa */
+  line-height: 1.6;      /* Jarak antar baris (spasi) */
+  margin: 0;
+}
+
+/* Styling link email */
+.footer-column a {
+  color: #FFFFFF;
+  text-decoration: none; /* Hilangkan garis bawah */
+}
+
+.footer-column a:hover {
+  text-decoration: underline; /* Tampilkan garis bawah saat mouse di atas */
+}
+
+/* 5. GARIS PEMISAH */
+.footer-divider {
+  border: none; /* Hapus style default */
+  border-top: 1px solid rgba(255, 255, 255, 0.3); /* Garis putih transparan */
+  margin: 30px 0; /* Jarak atas & bawah garis */
+}
+
+/* 6. BAGIAN BAWAH (Copyright) */
 .footer-bottom {
-  text-align: center;
-  font-size: 14px;
-  color: #d2e7d5;
+  text-align: center; /* Teks rata tengah */
+  font-size: 0.9rem;
 }
 
-/* ===============================
-   RESPONSIVE DESIGN
-=============================== */
-@media (max-width: 768px) {
-  footer {
-    padding: 30px 20px;
-  }
-
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-left, .footer-right {
-    flex: none;
-  }
-
-  footer p {
-    font-size: 14px;
-  }
-
-  footer h3 {
-    font-size: 18px;
-  }
+.footer-bottom p {
+  margin: 0;
 }
 
-@media (max-width: 480px) {
-  footer {
-    padding: 25px 15px;
+/* 7. RESPONSIVE (Untuk Layar Desktop) */
+/* Gunakan @media query untuk mengubah layout di layar lebar */
+@media (min-width: 768px) {
+  .footer-top {
+    flex-direction: row;     /* DESKTOP: Susun ke samping */
+    justify-content: space-between; /* Beri jarak antar kolom */
+    gap: 40px;                 /* Jarak antar kolom */
   }
 
-  footer p {
-    font-size: 13px;
-  }
-
-  footer h3 {
-    font-size: 16px;
-  }
-
-  .footer-bottom {
-    font-size: 12px;
+  .footer-column {
+    flex: 1; /* Buat setiap kolom membagi ruang secara merata */
   }
 }
-
