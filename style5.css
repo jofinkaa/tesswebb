@@ -1,0 +1,209 @@
+/* ====== STYLE UMUM ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f8fdf8;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ====== NAVBAR ====== */
+header {
+  background-color: #0f6e37;
+  color: #fff;
+  padding: 10px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #fff;
+  color: #0f6e37;
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style untuk Footer Utama */
+.site-footer {
+    background-color: #0f6e37; /* Warna latar belakang gelap */
+    color: #f1f1f1;            /* Warna teks utama (putih keabuan) */
+    padding: 40px 20px;        /* Jarak di dalam footer (atas/bawah 40px, kiri/kanan 20px) */
+}
+
+/* Kontainer untuk menjaga konten tetap di tengah dan rapi */
+.footer-container {
+    max-width: 1200px;         /* Lebar maksimum konten */
+    margin: 0 auto;            /* Posisikan di tengah */
+    display: flex;             /* Gunakan Flexbox untuk layout kolom */
+    flex-wrap: wrap;           /* Biarkan kolom turun ke bawah di layar kecil */
+    justify-content: space-between; /* Beri jarak antar kolom */
+}
+
+/* Style umum untuk setiap kolom */
+.footer-column {
+    flex: 1;                   /* Setiap kolom mengambil ruang yang sama */
+    min-width: 250px;          /* Lebar minimum sebelum kolom turun */
+    margin: 15px;              /* Jarak antar kolom */
+}
+
+/* Kolom 1: Logo dan Alamat */
+.footer-about .logo-container {
+    display: flex;
+    align-items: center;       /* Sejajarkan logo dan teks "Desa Sawangan" */
+    margin-bottom: 15px;
+}
+
+.footer-logo {
+    width: 60px;               /* Sesuaikan ukuran logo Anda */
+    height: auto;
+    margin-right: 15px;        /* Jarak antara logo dan teks */
+}
+
+.footer-about h2 {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.footer-about p {
+    font-size: 14px;
+    color: #c7c7c7;
+}
+
+/* Kolom 2 & 3: Menu dan Kontak */
+.footer-links h4,
+.footer-contact h4 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-transform: capitalize; /* "Menu" dan "Kontak" */
+}
+
+.footer-links ul {
+    list-style: none; /* Hapus tanda bullet */
+}
+
+.footer-links li a,
+.footer-contact p,
+.footer-contact p a {
+    color: #c7c7c7;
+    text-decoration: none; /* Hapus garis bawah link */
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+/* Efek saat link di-hover */
+.footer-links li a:hover,
+.footer-contact p a:hover {
+    color: #ffffff; /* Ubah warna teks jadi putih */
+}
+
+/* Bagian Bawah Footer: Garis dan Copyright */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 30px auto 0 auto; /* Jarak dari konten di atasnya */
+    text-align: center;       /* Teks copyright di tengah */
+    color: #aaa;
+    font-size: 14px;
+}
+
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background-color: #e0e0e0; /* Warna garis pemisah */
+}
+
+/* --- Penyesuaian untuk Layar Kecil (Mobile) --- */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Ubah layout jadi 1 kolom (menumpuk) */
+        text-align: center;     /* Ratakan teks di tengah */
+    }
+    
+    .footer-about .logo-container {
+        justify-content: center; /* Ratakan logo dan judul di tengah */
+    }
+}

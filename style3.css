@@ -1,0 +1,713 @@
+/* ====== STYLE UMUM ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f8fdf8;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ====== NAVBAR ====== */
+header {
+  background-color: #0f6e37;
+  color: #fff;
+  padding: 10px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #fff;
+  color: #0f6e37;
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+/* ====== DEMOGRAFI PENDUDUK ====== */
+.demografi {
+  padding: 60px 0;
+  /* Background putih untuk section ini */
+  background-color: #fff; 
+}
+
+/* Header (Judul & Ilustrasi) */
+.demografi-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 kolom */
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.demografi-header-teks h2 {
+  font-size: 2rem;
+  color: #E53935; /* Warna merah */
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.demografi-header-teks p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.demografi-header-img img {
+  width: 100%;
+  max-width: 350px; /* Batasi lebar ilustrasi */
+  display: block;
+  margin-left: auto; /* Posisikan ke kanan */
+}
+
+/* Subjudul Grid */
+.demografi-subjudul h2 {
+  font-size: 1.8rem;
+  color: #E53935; /* Warna merah */
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* Grid Statistik */
+.demografi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 kolom */
+  gap: 20px; /* Jarak antar kotak */
+}
+
+.demografi-box {
+  display: flex; /* Icon dan Teks berdampingan */
+  align-items: center; /* Sejajar di tengah */
+  gap: 20px; /* Jarak antara icon dan teks */
+  padding: 25px;
+  background-color: #fff;
+  border: 1px solid #f0f0f0; /* Border abu-abu sangat muda */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Bayangan sangat halus */
+  transition: all 0.3s ease;
+}
+
+.demografi-box:hover {
+  transform: translateY(-5px); /* Efek terangkat */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.demografi-icon img {
+  width: 80px; /* Ukuran icon */
+  height: 80px;
+  /* Hapus baris di bawah ini jika icon Anda sudah bulat */
+  /* border-radius: 50%; */ 
+  object-fit: contain;
+}
+
+.data-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #777;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.data-nilai {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333; /* Warna "Jiwa" */
+  margin: 0;
+}
+
+.data-angka {
+  font-weight: 700;
+  color: #E53935; /* Warna merah untuk angka */
+  margin-right: 8px; /* Jarak antara angka dan "Jiwa" */
+}
+
+/* Penyesuaian untuk layar HP (Mobile) */
+@media (max-width: 992px) {
+  .demografi-header {
+    grid-template-columns: 1fr; /* Tumpuk 1 kolom */
+    text-align: center;
+  }
+  .demografi-header-img img {
+    margin: 20px auto 0 auto; /* Posisikan gambar di tengah */
+  }
+}
+
+@media (max-width: 768px) {
+  .demografi-grid {
+    grid-template-columns: 1fr; /* Tumpuk 1 kolom */
+  }
+  .demografi-box {
+    /* Pusatkan konten di mobile */
+    flex-direction: column; 
+    text-align: center;
+  }
+}
+/* ====== PIRAMIDA PENDUDUK ====== */
+.piramida-penduduk {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.piramida-judul {
+    margin-bottom: 30px;
+}
+
+.piramida-judul h2 {
+    font-size: 2rem;
+    color: #E53935; /* Warna merah */
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Kontainer untuk kanvas chart */
+.piramida-chart-container {
+    width: 100%;
+    padding: 25px;
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+}
+
+/* Teks ringkasan di bawah */
+.piramida-summary {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #fcfcfc;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+}
+
+.piramida-summary p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.7;
+    margin: 0;
+}
+.dusun-chart {
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  margin-top: 40px; /* Jarak dari bagan piramida */
+  margin-bottom: 60px; /* Jarak ke footer */
+}
+
+.dusun-judul {
+  margin-bottom: 30px;
+}
+
+.dusun-judul h2 {
+  font-size: 2rem;
+  color: #E53935; /* Warna merah */
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Grid untuk bagan dan keterangan */
+.dusun-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Bagan 2x lebih besar dari keterangan */
+  gap: 40px;
+  align-items: center;
+}
+
+.chart-pie-container {
+  width: 100%;
+  max-width: 450px; /* Batasi ukuran pie chart */
+  margin: auto;
+}
+
+/* Keterangan di sebelah kanan */
+.chart-legend h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.chart-legend ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.chart-legend li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* Penyesuaian untuk layar HP (Mobile) */
+@media (max-width: 768px) {
+  .dusun-grid {
+    grid-template-columns: 1fr; /* Tumpuk 1 kolom */
+    gap: 20px;
+  }
+  .chart-legend {
+    /* Pindahkan keterangan ke atas bagan di mobile */
+    grid-row: 1; 
+  }
+}
+
+/* KODE BARU: BERDASARKAN PERKAWINAN */
+/* ==================================== */
+.perkawinan {
+  padding: 40px 0 60px 0;
+  /* Latar belakang abu-abu sangat muda/putih pudar */
+  background-color: #f8fdf8; 
+}
+
+.perkawinan-judul {
+  margin-bottom: 30px;
+}
+
+.perkawinan-judul h2 {
+  font-size: 2rem;
+  color: #E53935; /* Warna merah */
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Grid untuk 6 kotak */
+.perkawinan-grid {
+  display: grid;
+  /* 3 kolom di layar besar, 2 di tablet, 1 di HP */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px; /* Jarak antar kotak */
+}
+
+.perkawinan-box {
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 30px 20px;
+  
+  /* Menata konten (icon, label, angka) di tengah */
+  display: flex;
+  flex-direction: column; /* Menumpuk ke bawah */
+  align-items: center; /* Pusatkan horizontal */
+  text-align: center;
+  
+  transition: all 0.3s ease;
+}
+
+.perkawinan-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.perkawinan-box img {
+  width: 100px; /* Sesuaikan ukuran icon */
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px; /* Jarak icon ke label */
+}
+
+.perkawinan-label {
+  display: block;
+  font-size: 1.1rem; /* Ukuran label (mis: "Belum Kawin") */
+  font-weight: 500;
+  color: #555; /* Warna abu-abu tua */
+  margin-bottom: 5px; /* Jarak label ke angka */
+}
+
+.perkawinan-data {
+  font-size: 2.2rem; /* Ukuran angka (mis: "976") */
+  font-weight: 700;
+  color: #E53935; /* Warna merah */
+  margin: 0;
+}
+/* KODE BARU: BERDASARKAN AGAMA */
+/* ==================================== */
+.agama {
+  padding: 40px 0 60px 0;
+  background-color: #f8fdf8; 
+}
+
+.agama-judul {
+  margin-bottom: 30px;
+}
+
+.agama-judul h2 {
+  font-size: 2rem;
+  color: #E53935; /* Warna merah */
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Grid untuk 6 kotak */
+.agama-grid {
+  display: grid;
+  /* 3 kolom di layar besar, 2 di tablet, 1 di HP */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px; /* Jarak antar kotak */
+}
+
+.agama-box {
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 25px;
+  
+  /* Menata icon (kiri) dan teks (kanan) */
+  display: flex;
+  align-items: center; /* Sejajarkan vertikal di tengah */
+  gap: 20px; /* Jarak antara icon dan blok teks */
+  
+  transition: all 0.3s ease;
+}
+
+.agama-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.agama-icon {
+  width: 70px; /* Ukuran icon */
+  height: 70px;
+  object-fit: contain;
+  flex-shrink: 0; /* Mencegah icon penyok */
+}
+
+.agama-label {
+  display: block;
+  font-size: 1.1rem; /* Ukuran label (mis: "Islam") */
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 2px; /* Jarak label ke angka */
+}
+
+.agama-data {
+  font-size: 2.2rem; /* Ukuran angka (mis: "988") */
+  font-weight: 700;
+  color: #E53935; /* Warna merah */
+  margin: 0;
+}
+
+/* ... (Kode CSS Anda yang sudah ada di atas) ... */
+
+/* ==================================== */
+/* KODE BARU: BERDASARKAN PENDIDIKAN */
+/* ==================================== */
+.pendidikan-chart {
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  margin-top: 40px; /* Jarak dari section agama */
+  margin-bottom: 60px; /* Jarak ke footer */
+}
+
+.pendidikan-judul {
+  margin-bottom: 30px;
+}
+
+.pendidikan-judul h2 {
+  font-size: 2rem;
+  color: #E53935; /* Warna merah */
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.chart-bar-container {
+  width: 100%;
+  padding: 25px;
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+}
+
+/* Gaya dasar untuk font dan latar belakang */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #F9F9F9;
+    color: #333;
+    padding: 20px;
+}
+
+/* Kontainer utama untuk seluruh bagian statistik */
+.stats-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Judul utama, "Berdasarkan Pekerjaan" */
+.stats-title {
+    /* Warna merah/salmon dari judul di gambar */
+    color: #E53935; 
+    font-size: 2rem; /* 32px */
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* Wrapper untuk layout 2 kolom */
+.stats-layout {
+    display: flex;
+    flex-wrap: wrap; /* Agar bisa stack di layar kecil */
+    gap: 30px; /* Jarak antar kolom */
+}
+
+/* --- Kolom Kiri: Daftar Pekerjaan --- */
+.job-list {
+    flex: 1; /* Mengambil 1 bagian dari ruang */
+    min-width: 300px; /* Lebar minimum sebelum stack */
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    overflow: hidden; /* Agar border-radius rapi */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Header tabel "Jenis Pekerjaan | Jumlah" */
+.job-list-header {
+    display: flex;
+    justify-content: space-between;
+    /* Warna latar belakang merah/salmon dari header tabel */
+    background-color: #c7c7c7; 
+    color: #333; /* Teks warna gelap */
+    font-weight: 600;
+    padding: 14px 20px;
+}
+
+/* Setiap baris data di daftar */
+.job-list-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-bottom: 1px solid #F0F0F0;
+    font-size: 0.95rem; /* 15px */
+    color: #555;
+}
+
+/* Menghilangkan border di item terakhir */
+.job-list-item:last-child {
+    border-bottom: none;
+}
+
+/* --- Kolom Kanan: Grid Kartu --- */
+.job-grid {
+    flex: 2; /* Mengambil 2 bagian, (lebih lebar) */
+    display: grid;
+    /* Membuat 3 kolom dengan lebar yang sama */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; /* Jarak antar kartu */
+}
+
+/* Gaya untuk setiap kartu statistik */
+.stat-card {
+    background-color: #FFFFFF;
+    border: 1px solid #ECECEC;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left; /* Teks rata kiri di dalam kartu */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card h4 {
+    margin: 0 0 10px 0;
+    font-size: 1rem; /* 16px */
+    color: #666;
+    font-weight: 500;
+}
+
+.stat-card .stat-number {
+    font-size: 2.5rem; /* 40px */
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+/* --- Penyesuaian untuk Layar HP (Responsif) --- */
+@media (max-width: 900px) {
+    .stats-layout {
+        /* Kolom akan menumpuk ke bawah */
+        flex-direction: column; 
+    }
+    .job-grid {
+        /* Grid menjadi 2 kolom di tablet */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .job-grid {
+        /* Grid menjadi 1 kolom di HP */
+        grid-template-columns: 1fr;
+    }
+    .stats-title {
+        font-size: 1.5rem; /* 24px */
+    }
+    .stat-card .stat-number {
+        font-size: 2rem; /* 32px */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style untuk Footer Utama */
+.site-footer {
+    background-color: #0f6e37; /* Warna latar belakang gelap */
+    color: #f1f1f1;            /* Warna teks utama (putih keabuan) */
+    padding: 40px 20px;        /* Jarak di dalam footer (atas/bawah 40px, kiri/kanan 20px) */
+}
+
+/* Kontainer untuk menjaga konten tetap di tengah dan rapi */
+.footer-container {
+    max-width: 1200px;         /* Lebar maksimum konten */
+    margin: 0 auto;            /* Posisikan di tengah */
+    display: flex;             /* Gunakan Flexbox untuk layout kolom */
+    flex-wrap: wrap;           /* Biarkan kolom turun ke bawah di layar kecil */
+    justify-content: space-between; /* Beri jarak antar kolom */
+}
+
+/* Style umum untuk setiap kolom */
+.footer-column {
+    flex: 1;                   /* Setiap kolom mengambil ruang yang sama */
+    min-width: 250px;          /* Lebar minimum sebelum kolom turun */
+    margin: 15px;              /* Jarak antar kolom */
+}
+
+/* Kolom 1: Logo dan Alamat */
+.footer-about .logo-container {
+    display: flex;
+    align-items: center;       /* Sejajarkan logo dan teks "Desa Sawangan" */
+    margin-bottom: 15px;
+}
+
+.footer-logo {
+    width: 60px;               /* Sesuaikan ukuran logo Anda */
+    height: auto;
+    margin-right: 15px;        /* Jarak antara logo dan teks */
+}
+
+.footer-about h2 {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.footer-about p {
+    font-size: 14px;
+    color: #c7c7c7;
+}
+
+/* Kolom 2 & 3: Menu dan Kontak */
+.footer-links h4,
+.footer-contact h4 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-transform: capitalize; /* "Menu" dan "Kontak" */
+}
+
+.footer-links ul {
+    list-style: none; /* Hapus tanda bullet */
+}
+
+.footer-links li a,
+.footer-contact p,
+.footer-contact p a {
+    color: #c7c7c7;
+    text-decoration: none; /* Hapus garis bawah link */
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+/* Efek saat link di-hover */
+.footer-links li a:hover,
+.footer-contact p a:hover {
+    color: #ffffff; /* Ubah warna teks jadi putih */
+}
+
+/* Bagian Bawah Footer: Garis dan Copyright */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 30px auto 0 auto; /* Jarak dari konten di atasnya */
+    text-align: center;       /* Teks copyright di tengah */
+    color: #aaa;
+    font-size: 14px;
+}
+
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background-color: #e0e0e0; /* Warna garis pemisah */
+}
+
+/* --- Penyesuaian untuk Layar Kecil (Mobile) --- */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Ubah layout jadi 1 kolom (menumpuk) */
+        text-align: center;     /* Ratakan teks di tengah */
+    }
+    
+    .footer-about .logo-container {
+        justify-content: center; /* Ratakan logo dan judul di tengah */
+    }
+}

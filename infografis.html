@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desa Sawangan - Menuju Desa Digital dan Mandiri</title>
+  <link rel="stylesheet" href="css/style3.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+   
+
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <img src="assets/logo.jpg" alt="Logo Desa Sawangan">
+        <div
+        <h1>Desa Sawangan</h1>
+        <p>Kabupaten Minahasa</p>
+      </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="infografis.html" class="active">Infografis</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+ 
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="demografi container">
+    
+    <div class="demografi-header">
+      <div class="demografi-header-teks">
+        <h2>DEMOGRAFI PENDUDUK</h2>
+        <p>
+          Memberikan informasi lengkap mengenai karakteristik demografi penduduk suatu wilayah. Mulai dari jumlah penduduk, usia, jenis kelamin, tingkat pendidikan, pekerjaan, agama, dan aspek penting lainnya yang menggambarkan komposisi populasi secara rinci.
+        </p>
+      </div>
+      <div class="demografi-header-img">
+        <img src="assets/demografi-illustrasi.png" alt="Ilustrasi Demografi">
+      </div>
+    </div>
+
+    <div class="demografi-subjudul">
+      <h2>Jumlah Penduduk dan Kepala Keluarga</h2>
+    </div>
+
+    <div class="demografi-grid">
+      
+      <div class="demografi-box">
+        <div class="demografi-icon">
+          <img src="assets/icon-total-penduduk.png" alt="Icon Total Penduduk">
+        </div>
+        <div class="demografi-data">
+          <span class="data-label">TOTAL PENDUDUK</span>
+          <p class="data-nilai"><span class="data-angka">1.890</span> Jiwa</p>
+        </div>
+      </div>
+      
+      <div class="demografi-box">
+        <div class="demografi-icon">
+          <img src="assets/icon-kepala-keluarga.png" alt="Icon Kepala Keluarga">
+        </div>
+        <div class="demografi-data">
+          <span class="data-label">KEPALA KELUARGA</span>
+          <p class="data-nilai"><span class="data-angka">436</span> Jiwa</p>
+        </div>
+      </div>
+      
+      <div class="demografi-box">
+        <div class="demografi-icon">
+          <img src="assets/icon-perempuan.png" alt="Icon Perempuan">
+        </div>
+        <div class="demografi-data">
+          <span class="data-label">PEREMPUAN</span>
+          <p class="data-nilai"><span class="data-angka">960</span> Jiwa</p>
+        </div>
+      </div>
+      
+      <div class="demografi-box">
+        <div class="demografi-icon">
+          <img src="assets/icon-laki-laki.png" alt="Icon Laki-laki">
+        </div>
+        <div class="demografi-data">
+          <span class="data-label">LAKI-LAKI</span>
+          <p class="data-nilai"><span class="data-angka">930</span> Jiwa</p>
+        </div>
+      </div>
+
+    </div> </section>
+
+<section class="piramida-penduduk container">
+        <div class="piramida-judul">
+            <h2>Berdasarkan Kelompok Umur</h2>
+        </div>
+        
+        <div class="piramida-chart-container">
+            <canvas id="piramidaPendudukChart"></canvas>
+        </div>
+        
+        <div class="piramida-summary">
+            <p>
+                Untuk jenis kelamin laki-laki, kelompok umur <strong>25-29</strong> adalah kelompok umur tertinggi dengan jumlah <strong>97 orang</strong> atau <strong>10.43%</strong>. Sedangkan, kelompok umur <strong>0-4</strong> adalah yang terendah dengan jumlah <strong>3 orang</strong> atau <strong>0.32%</strong>.
+            </p>
+        </div>
+    </section>
+<section class="dusun-chart container">
+    <div class="dusun-judul">
+      <h2>Berdasarkan Dusun</h2>
+    </div>
+    <div class="dusun-grid">
+      <div class="chart-pie-container">
+        <canvas id="dusunPieChart"></canvas>
+      </div>
+      <div class="chart-legend">
+        <h3>Keterangan:</h3>
+        <ul id="dusun-legend-list">
+          </ul>
+      </div>
+    </div>
+    <script src="http://googleusercontent.com/chartjs.org/3"></script>
+
+    <script src="script.js"></script>
+<section class="perkawinan container">
+    <div class="perkawinan-judul">
+      <h2>Berdasarkan Perkawinan</h2>
+    </div>
+    
+    <div class="perkawinan-grid">
+      
+      <div class="perkawinan-box">
+        <img src="assets/icon-belum-kawin.png" alt="Belum Kawin">
+        <span class="perkawinan-label">Belum Kawin</span>
+        <p class="perkawinan-data">976</p>
+      </div>
+      
+      <div class="perkawinan-box">
+        <img src="assets/icon-kawin.png" alt="Kawin">
+        <span class="perkawinan-label">Kawin</span>
+        <p class="perkawinan-data">874</p>
+      </div>
+      
+      <div class="perkawinan-box">
+        <img src="assets/icon-cerai-mati.png" alt="Cerai Mati">
+        <span class="perkawinan-label">Cerai Mati</span>
+        <p class="perkawinan-data">36</p>
+      </div>
+      
+      <div class="perkawinan-box">
+        <img src="assets/icon-cerai-hidup.png" alt="Cerai Hidup">
+        <span class="perkawinan-label">Cerai Hidup</span>
+        <p class="perkawinan-data">0</p>
+      </div>
+      
+      <div class="perkawinan-box">
+        <img src="assets/icon-kawin-tercatat.png" alt="Kawin Tercatat">
+        <span class="perkawinan-label">Kawin Tercatat</span>
+        <p class="perkawinan-data">0</p>
+      </div>
+      
+      <div class="perkawinan-box">
+        <img src="assets/icon-kawin-tdk-tercatat.png" alt="Kawin Tidak Tercatat">
+        <span class="perkawinan-label">Kawin Tidak Tercatat</span>
+        <p class="perkawinan-data">0</p>
+      </div>
+
+    </div> </section>
+<section class="agama container">
+    <div class="agama-judul">
+      <h2>Berdasarkan Agama</h2>
+    </div>
+    
+    <div class="agama-grid">
+      
+      <div class="agama-box">
+        <img src="assets/icon-islam.png" alt="Islam" class="agama-icon">
+        <div class="agama-info">
+          <span class="agama-label">Islam</span>
+          <p class="agama-data">0</p>
+        </div>
+      </div>
+      
+      <div class="agama-box">
+        <img src="assets/icon-katolik.png" alt="Katolik" class="agama-icon">
+        <div class="agama-info">
+          <span class="agama-label">Katolik</span>
+          <p class="agama-data">0</p>
+        </div>
+      </div>
+      
+      <div class="agama-box">
+        <img src="assets/icon-kristen.png" alt="Kristen" class="agama-icon">
+        <div class="agama-info">
+          <span class="agama-label">Kristen</span>
+          <p class="agama-data">0</p>
+        </div>
+      </div>
+      
+      <div class="agama-box">
+        <img src="assets/icon-kepercayaan.png" alt="Kepercayaan Lainnya" class="agama-icon">
+        <div class="agama-info">
+          <span class="agama-label">Kepercayaan Lainnya</span>
+          <p class="agama-data">1</p>
+        </div>
+      </div>
+      
+      <div class="agama-box">
+        <img src="assets/icon-hindu.png" alt="Hindu" class="agama-icon">
+        <div class="agama-info">
+          <span class="agama-label">Hindu</span>
+          <p class="agama-data">0</p>
+        </div>
+      </div>
+      
+      <div class="agama-box">
+        <img src="assets/icon-buddha.png" alt="Buddha" class="agama-icon">
+        <div class="agama-info">
+          <span class="agama-label">Buddha</span>
+          <p class="agama-data">0</p>
+        </div>
+      </div>
+
+    </div> </section>
+
+
+ <div
+    <h2>Berdasarkan Pendidikan</h2>
+  <div class="chart-container">
+    <canvas id="pendidikanChart"></canvas>
+  </div>
+
+<div class="stats-container">
+        
+        <h2 class="stats-title">Berdasarkan Pekerjaan</h2>
+
+        <div class="stats-layout">
+
+            <div class="job-list">
+                <div class="job-list-header">
+                    <span>Jenis Pekerjaan</span>
+                    <span>Jumlah</span>
+                </div>
+                <div class="job-list-item">
+                    <span>Petani/Pekebun</span>
+                    <span>950</span>
+                </div>
+                <div class="job-list-item">
+                    <span>Belum/Tidak Bekerja</span>
+                    <span>404</span>
+                </div>
+                <div class="job-list-item">
+                    <span>Pelajar/Mahasiswa</span>
+                    <span>350</span>
+                </div>
+                <div class="job-list-item">
+                    <span>Mengurus Rumah Tangga</span>
+                    <span>154</span>
+                </div>
+                <div class="job-list-item">
+                    <span>Wiraswasta</span>
+                    <span>12</span>
+                </div>
+                <div class="job-list-item">
+                    <span>Karyawan Swasta</span>
+                    <span>5</span>
+                </div>
+                <div class="job-list-item">
+                    <span>Buruh Tani/Perkebunan</span>
+                    <span>3</span>
+                </div>
+            </div>
+
+            <div class="job-grid">
+                <div class="stat-card">
+                    <h4>Petani/Pekebun</h4>
+                    <p class="stat-number">950</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Belum/Tidak Bekerja</h4>
+                    <p class="stat-number">404</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Pelajar/Mahasiswa</h4>
+                    <p class="stat-number">350</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Mengurus Rumah Tangga</h4>
+                    <p class="stat-number">154</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Wiraswasta</h4>
+                    <p class="stat-number">12</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Karyawan Swasta</h4>
+                    <p class="stat-number">5</p>
+                </div>
+                </div>
+
+        </div>
+    </div>
+
+
+<footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column footer-about">
+                <div class="logo-container">
+                    <img src="assets/logo.jpg" alt="Logo Desa Sawangan" class="footer-logo">
+                    <h2>Desa Sawangan</h2>
+                </div>
+                <p>
+                    Kec. Sonder, Kabupaten Minahasa<br>
+                    Sulawesi Utara, Indonesia
+                </p>
+            </div>
+
+            <div class="footer-column footer-links">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profil.html">Profile</a></li>
+                    <li><a href="index.html">Infografis</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column footer-contact">
+                <h4>Kontak</h4>
+                <p>
+                    Email: <a href="mailto:desasawangan@gmail.com">desasawangan@gmail.com</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <hr class="footer-divider">
+            <p>&copy; 2025 Desa Sawangan. All rights reserved.</p>
+        </div>
+    </footer>
+    </body>
+</html>
+
+
