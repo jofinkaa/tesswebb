@@ -19,14 +19,16 @@ body {
 }
 
 /* ====== NAVBAR ====== */
-/* ======= NAVBAR DASAR ======= */
+/* ======= NAVBAR ======= */
 .navbar {
-  background-color: #d63031;
+  background-color: #2e7d32; /* hijau desa */
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
+  position: relative;
+  z-index: 1000;
 }
 
 .logo {
@@ -35,23 +37,13 @@ body {
 }
 
 .logo img {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
-.text-logo h3 {
-  margin: 0;
-  font-size: 16px;
-}
-
-.text-logo p {
-  margin: 0;
-  font-size: 12px;
-}
-
-/* ======= NAV MENU ======= */
+/* ======= MENU ======= */
 .nav-links {
   list-style: none;
   display: flex;
@@ -69,17 +61,17 @@ body {
 .nav-links li a.active,
 .nav-links li a:hover {
   background-color: white;
-  color: #d63031;
+  color: #2e7d32;
 }
 
-/* ======= HAMBURGER ICON ======= */
+/* ======= HAMBURGER ======= */
 .menu-toggle {
   font-size: 28px;
   cursor: pointer;
   display: none;
 }
 
-/* ======= RESPONSIVE (untuk HP) ======= */
+/* ======= MODE HP ======= */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -87,13 +79,14 @@ body {
 
   .nav-links {
     position: absolute;
-    top: 70px;
+    top: 60px;
     right: 0;
-    background-color: #d63031;
+    background-color: #2e7d32;
     flex-direction: column;
     width: 100%;
     text-align: center;
     display: none;
+    padding: 10px 0;
   }
 
   .nav-links.active {
@@ -103,8 +96,13 @@ body {
   .nav-links li {
     margin: 10px 0;
   }
-}
 
+  .nav-links li a {
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+  }
+}
 
 /* ====== HERO SECTION ====== */
 .hero {
@@ -516,6 +514,7 @@ body {
     }
 
 }
+
 
 
 
